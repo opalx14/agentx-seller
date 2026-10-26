@@ -1,0 +1,65 @@
+{
+  "customers": [
+    { "id": "cus_001", "name": "Nguyen Van A", "phone": "+84901111111" },
+    { "id": "cus_002", "name": "Tran Van B", "phone": "+84902222222" },
+    { "id": "cus_003", "name": "Le Van C", "phone": "+84903333333" }
+  ],
+  "orders": [
+    { "id": "A1001", "customerId": "cus_001", "customerName": "Nguyen Van A", "customerPhone": "+84901111111", "status": "shipped", "totalAmount": 450000, "currency": "VND", "createdAt": "2026-10-17T11:00:00.000Z" },
+    { "id": "A1002", "customerId": "cus_002", "customerName": "Tran Van B", "customerPhone": "+84902222222", "status": "delivered", "totalAmount": 1800000, "currency": "VND", "createdAt": "2026-10-16T11:00:00.000Z", "deliveredAt": "2026-10-19T11:00:00.000Z" },
+    { "id": "A1003", "customerId": "cus_003", "customerName": "Le Van C", "customerPhone": "+84903333333", "status": "delivered", "totalAmount": 300000, "currency": "VND", "createdAt": "2026-10-15T11:00:00.000Z", "deliveredAt": "2026-10-18T11:00:00.000Z" }
+  ],
+  "shipments": [
+    { "orderId": "A1001", "carrier": "GHN", "trackingNumber": "GHN-A1001", "status": "in_transit", "estimatedDelivery": "2026-10-23" },
+    { "orderId": "A1002", "carrier": "GHTK", "trackingNumber": "GHTK-A1002", "status": "delivered" },
+    { "orderId": "A1003", "carrier": "J&T", "trackingNumber": "JT-A1003", "status": "delivered" }
+  ],
+  "returns": [],
+  "refunds": [],
+  "approvals": [],
+  "audit": [
+    { "id": "audit_seed_1", "time": "2026-10-21T11:00:00.000Z", "action": "system_ready", "status": "success", "detail": "Mock commerce adapter initialized with 3 demo orders." }
+  ],
+  "conversations": [
+    {
+      "id": "CONV-1001",
+      "customerId": "cus_001",
+      "channel": "web",
+      "externalConversationId": "web:cus_001",
+      "status": "ai_active",
+      "createdAt": "2026-10-21T11:00:00.000Z",
+      "updatedAt": "2026-10-21T11:00:00.000Z",
+      "messages": [
+        { "id": "msg_seed_1001_customer", "sender": "customer", "content": "Where is my order A1001?", "createdAt": "2026-10-21T11:00:00.000Z" },
+        { "id": "msg_seed_1001_ai", "sender": "ai", "content": "Order A1001 is in transit with GHN. Estimated delivery: 2026-10-23.", "createdAt": "2026-10-21T11:00:00.000Z" }
+      ]
+    },
+    {
+      "id": "CONV-1002",
+      "customerId": "cus_002",
+      "channel": "web",
+      "externalConversationId": "web:cus_002",
+      "status": "human_required",
+      "createdAt": "2026-10-21T11:00:00.000Z",
+      "updatedAt": "2026-10-21T11:00:00.000Z",
+      "messages": [
+        { "id": "msg_seed_1002_customer", "sender": "customer", "content": "The item from A1002 arrived damaged. Refund me.", "createdAt": "2026-10-21T11:00:00.000Z" },
+        { "id": "msg_seed_1002_ai", "sender": "ai", "content": "Your refund request exceeds the automatic limit and needs human approval.", "createdAt": "2026-10-21T11:00:00.000Z" }
+      ]
+    },
+    {
+      "id": "CONV-1003",
+      "customerId": "cus_003",
+      "channel": "web",
+      "externalConversationId": "web:cus_003",
+      "status": "ai_active",
+      "createdAt": "2026-10-21T11:00:00.000Z",
+      "updatedAt": "2026-10-21T11:00:00.000Z",
+      "messages": [
+        { "id": "msg_seed_1003_customer", "sender": "customer", "content": "I want to return A1003 because the size is wrong.", "createdAt": "2026-10-21T11:00:00.000Z" },
+        { "id": "msg_seed_1003_ai", "sender": "ai", "content": "I can help check whether A1003 is still inside the return window.", "createdAt": "2026-10-21T11:00:00.000Z" }
+      ]
+    }
+  ],
+  "policy": { "autoRefundLimit": 500000, "returnWindowDays": 7 }
+}

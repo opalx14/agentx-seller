@@ -1,0 +1,29 @@
+{
+  "stageTimeOffsetsHours": [72, 58, 38, 20, 5, 0],
+  "routes": {
+    "GHN": [
+      { "title": "Order confirmed", "detail": "Seller prepared the parcel for pickup.", "area": "Seller pickup point", "point": { "x": 54, "y": 238 } },
+      { "title": "Picked up", "detail": "Parcel was handed to GHN.", "area": "Ho Chi Minh City", "point": { "x": 94, "y": 198 } },
+      { "title": "Sorting center", "detail": "Parcel was scanned at the regional sorting center.", "area": "HCM Mega SOC", "point": { "x": 156, "y": 154 } },
+      { "title": "Delivery hub", "detail": "Parcel is being prepared for the last-mile route.", "area": "Bình Thạnh Hub", "point": { "x": 230, "y": 112 } },
+      { "title": "Out for delivery", "detail": "Courier is heading to the delivery area.", "area": "Customer area", "point": { "x": 292, "y": 76 } },
+      { "title": "Delivered", "detail": "Parcel was delivered successfully.", "area": "Delivery address", "point": { "x": 340, "y": 48 } }
+    ],
+    "GHTK": [
+      { "title": "Order confirmed", "detail": "Seller prepared the parcel for pickup.", "area": "Seller pickup point", "point": { "x": 54, "y": 238 } },
+      { "title": "Picked up", "detail": "Parcel was handed to GHTK.", "area": "Ho Chi Minh City", "point": { "x": 100, "y": 202 } },
+      { "title": "Sorting center", "detail": "Parcel passed through the regional sorting center.", "area": "Tân Bình Sorting Hub", "point": { "x": 170, "y": 150 } },
+      { "title": "Delivery hub", "detail": "Parcel reached the last-mile hub.", "area": "District Delivery Hub", "point": { "x": 242, "y": 110 } },
+      { "title": "Out for delivery", "detail": "Courier is heading to the delivery area.", "area": "Customer area", "point": { "x": 302, "y": 74 } },
+      { "title": "Delivered", "detail": "Parcel was delivered successfully.", "area": "Delivery address", "point": { "x": 340, "y": 48 } }
+    ],
+    "J&T": [
+      { "title": "Order confirmed", "detail": "Seller prepared the parcel for pickup.", "area": "Seller pickup point", "point": { "x": 54, "y": 238 } },
+      { "title": "Picked up", "detail": "Parcel was handed to J&T Express.", "area": "Ho Chi Minh City", "point": { "x": 100, "y": 205 } },
+      { "title": "Sorting center", "detail": "Parcel was scanned at the city gateway.", "area": "HCM Gateway", "point": { "x": 170, "y": 155 } },
+      { "title": "Delivery hub", "detail": "Parcel reached the destination delivery hub.", "area": "Local Delivery Hub", "point": { "x": 244, "y": 112 } },
+      { "title": "Out for delivery", "detail": "Courier is heading to the delivery area.", "area": "Customer area", "point": { "x": 300, "y": 76 } },
+      { "title": "Delivered", "detail": "Parcel was delivered successfully.", "area": "Delivery address", "point": { "x": 340, "y": 48 } }
+    ]
+  }
+}

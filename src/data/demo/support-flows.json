@@ -1,0 +1,21 @@
+{
+  "refund": {
+    "reasons": [
+      { "value": "damaged_item", "label": "Item damaged or broken", "evidence": true },
+      { "value": "wrong_item", "label": "Wrong item received", "evidence": true },
+      { "value": "missing_item", "label": "Missing item / accessory", "evidence": true },
+      { "value": "not_as_described", "label": "Item not as described", "evidence": true },
+      { "value": "not_received", "label": "Order not received", "evidence": false },
+      { "value": "customer_request", "label": "Other issue", "evidence": false }
+    ]
+  },
+  "return": {
+    "reasons": [
+      { "value": "wrong_size", "label": "Wrong size / does not fit", "evidence": false },
+      { "value": "wrong_item", "label": "Wrong item received", "evidence": true },
+      { "value": "damaged_item", "label": "Item damaged or defective", "evidence": true },
+      { "value": "no_longer_needed", "label": "No longer needed", "evidence": false },
+      { "value": "customer_request", "label": "Other reason", "evidence": false }
+    ]
+  }
+}

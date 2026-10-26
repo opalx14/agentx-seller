@@ -1,0 +1,54 @@
+{
+  "storageKey": "agentx:onboarding:completed",
+  "journey": "refund-approval",
+  "steps": [
+    {
+      "id": "add-product",
+      "routePrefix": "/store",
+      "target": "store-add-P002",
+      "title": "Create a demo order",
+      "description": "Start with the high-value headphones so you can see AgentX hand off a refund safely.",
+      "advanceEvent": "agentx:tour:product-added"
+    },
+    {
+      "id": "checkout",
+      "routePrefix": "/store",
+      "target": "store-checkout",
+      "title": "Place the order",
+      "description": "This creates the verified customer, order and shipment used by AgentX.",
+      "advanceEvent": "agentx:tour:checkout-complete"
+    },
+    {
+      "id": "open-agent",
+      "routePrefix": "/store",
+      "target": "store-open-support",
+      "title": "Open AgentX",
+      "description": "Support opens over the store, so the customer never leaves the shopping experience.",
+      "advanceEvent": "agentx:tour:support-opened"
+    },
+    {
+      "id": "refund",
+      "routePrefix": "/store",
+      "target": "agentx-refund",
+      "title": "Try a high-value refund",
+      "description": "AgentX collects the request, then seller policy decides whether AI can act automatically.",
+      "advanceEvent": "agentx:tour:refund-started"
+    },
+    {
+      "id": "refund-flow",
+      "routePrefix": "/store",
+      "target": "agentx-refund-flow",
+      "title": "Complete the refund request",
+      "description": "Choose the delivery state, reason and evidence. AgentX submits only the structured request you confirm.",
+      "advanceEvent": "agentx:tour:refund-submitted"
+    },
+    {
+      "id": "seller-review",
+      "routePrefix": "/hub",
+      "target": "hub-human-review",
+      "title": "Seller control stays in the loop",
+      "description": "Requests above the automatic refund limit stop here for a human decision.",
+      "advanceEvent": "agentx:tour:approval-resolved"
+    }
+  ]
+}
